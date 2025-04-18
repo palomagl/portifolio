@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <title>Dev | Portifólio</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  </head>
+  <body>
+    <div class="particulas"></div>
+    <!-------------div do menu--------------->
+    <nav class="navegacao">
+      <ul class="menu">
+        <li>
+          <a href="#inicio" class="menu-link">Inicio</a>
+        </li>
+        <li>
+          <a href="#sobre" class="menu-link">Sobre</a>
+        </li>
+        <li>
+          <a href="#projetos" class="menu-link">Projetos</a>
+        </li>
+        <li>
+          <a href="#contato" class="menu-link">Contato</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+      <img
+        src="img/foto-de-perfil.jpeg"
+        alt="Foto da Paloma"
+        class="foto-perfil"
+      />
+      <h1>Paloma Lorenzon</h1>
+      <p class="cabecalho-sub-titulo">Desenvolvedora Front End</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+      <h2 class="sobre-titulo">Sobre Mim</h2>
+      <div class="sobre-caixa">
+        <p class="sobre-paragrafo">
+          Olá! Sou estudante de programação, em constante aprendizado. Gosto de
+          criar, testar ideias e aprender com a prática.
+        </p>
+      </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+      <h2 class="projetos-titulo">Meus Projetos</h2>
+      <div class="projetos-caixa">
+        <div class="projetos-itens">
+          <img
+            src="img/projeto-avaliacao.jpg.png"
+            alt="Projeto 1"
+            class="projetos-imagem"
+          />
+          <div class="caixa-texto-paragrafo">
+            <h3 class="info-projetos">Site de Avaliação</h3>
+            <p class="paragrafo-projeto">Desenvolvido para a loja onde trabalho, permite que clientes avaliem o atendimento e deixem comentários. Feito com PHP, JavaScript, HTML, CSS e SQL.</p>
+          </div>
+        </div>
+
+        <div class="projetos-itens">
+          <img src="img/pagina.jpeg" alt="Projeto 2" class="projetos-imagem" />
+          <div class="caixa-texto-paragrafo">
+            <h3 class="info-projetos">Pagina de Login</h3>
+            <p class="paragrafo-projeto">Tela de login responsiva desenvolvida com HTML e CSS, focada em design limpo e navegação intuitiva.</p>
+          </div>
+        </div>
+
+        <div class="projetos-itens">
+          <img
+            src="img/tela-viagens.png"
+            alt="Projeto 3"
+            class="projetos-imagem"
+          />
+          <div class="caixa-texto-paragrafo">
+            <h3 class="info-projetos">Pagina de Viagens</h3>
+            <p class="paragrafo-projeto">Site informativo sobre pontos turísticos, restaurantes e hotéis em cidades como Paris, Londres, Barcelona e Gramado. Desenvolvido com HTML e CSS.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="contato">
+      <h2 class="contato-titulo">Entre Em Contato</h2>
+      <form
+        class="formulario-contato"
+        id="contato"
+        onsubmit="enviarWhats(event)"
+      >
+        <div class="grupo-form">
+          <input placeholder="Nome" class="campo-form" id="nome" />
+        </div>
+        <div class="grupo-form">
+          <textarea
+            placeholder="Digite sua Mensagem"
+            rows="4"
+            class="campo-form"
+            id="mensagem"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="botao-form">Enviar Whatsap</button>
+      </form>
+    </section>
+    <script>
+      function enviarWhats(event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value;
+        const mensagem = document.getElementById("mensagem").value;
+        const telefone = "5551998127367";
+
+        const text = `Olá! Me chamo ${nome}, ${mensagem}`;
+        const msgFormatada = encodeURIComponent(text);
+
+        const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+        console.log(url);
+
+        window.open(url, "_blank");
+      }
+    </script>
+
+    <footer class="rodape">
+      <div class="redes-sociais">
+        <a
+          href="https://instagram.com/_palomagl"
+          target="_blank"
+          class="icone-rede"
+        >
+          <i class="fab fa-instagram"></i>
+          <!-- Ícone do Instagram -->
+        </a>
+        <a
+          href="https://github.com/SEU_USUARIO"
+          target="_blank"
+          class="icone-rede"
+        >
+          <i class="fab fa-github"></i>
+          <!-- Ícone do GitHub -->
+        </a>
+        <a href="mailto:Palomalorenzon1993@gmail.com" class="icone-rede">
+          <i class="fas fa-envelope"></i>
+          <!-- Ícone do E-mail -->
+        </a>
+      </div>
+      <p>© 2025 Paloma Lorenzon. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
