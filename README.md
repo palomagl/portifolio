@@ -27,7 +27,7 @@ Durante o desenvolvimento, pratiquei e aprimorei:
 
 ## 🌐 Acesse o projeto
 
-👉 [Clique aqui para visualizar](https://[seu-link.vercel.app](https://paloma-portifolio.vercel.app/#sobre))
+👉 [Clique aqui para visualizar](https://[paloma-portifolio.vercel.app/])
 
 ---
 
